@@ -5,7 +5,7 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-	"postCreateCommand": "sudo apt-get update && sudo apt-get upgrade && sudo apt-get install libpng16-16 libnewlib-arm-none-eabi",
+	"postCreateCommand": "sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y install libpng16-16 libnewlib-arm-none-eabi",
 	"mounts": [
 		"source=/etc/PlaydateSDK,target=/etc/PlaydateSDK,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
