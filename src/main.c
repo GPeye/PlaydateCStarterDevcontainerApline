@@ -52,7 +52,7 @@ static int update(void* userdata)
 	
 	pd->graphics->clear(kColorWhite);
 	pd->graphics->setFont(font);
-	pd->graphics->drawText("Hello World!", strlen("Hello World!"), kASCIIEncoding, x, y);
+	pd->graphics->drawText("Hello, World!", strlen("Hello, World!"), kASCIIEncoding, x, y);
 
 	x += dx;
 	y += dy;
