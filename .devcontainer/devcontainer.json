@@ -13,7 +13,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "sudo apt-get update && sudo apt-get upgrade && sudo apt-get install libpng16-16",
+	"postCreateCommand": "sudo apt-get update && sudo apt-get upgrade && sudo apt-get install libpng16-16 libnewlib-arm-none-eabi",
 	"mounts": [
 		"source=/etc/PlaydateSDK,target=/etc/PlaydateSDK,type=bind,consistency=cached",
 		"source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
