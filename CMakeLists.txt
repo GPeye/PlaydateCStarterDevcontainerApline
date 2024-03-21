@@ -28,18 +28,12 @@ set(CMAKE_XCODE_GENERATE_SCHEME TRUE)
 set(PLAYDATE_GAME_NAME hello_world)
 set(PLAYDATE_GAME_DEVICE hello_world_DEVICE)
 
-include_directories("src");
-file(GLOB SRC
-     "src/*.c"
-     "src/*.h"
-)
-
 project(${PLAYDATE_GAME_NAME} C ASM)
 
 if (TOOLCHAIN STREQUAL "armgcc")
-	add_executable(${PLAYDATE_GAME_DEVICE} ${SRC})
+	add_executable(${PLAYDATE_GAME_DEVICE} src/main.c)
 else()
-	add_library(${PLAYDATE_GAME_NAME} SHARED ${SRC} )
+	add_library(${PLAYDATE_GAME_NAME} SHARED src/main.c )
 endif()
 
 include(${SDK}/C_API/buildsupport/playdate_game.cmake)
